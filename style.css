@@ -19,3 +19,13 @@ header {
     padding: .25rem 1rem;
     font-size: 18px;
 }
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+    height: 15vw;
+    padding: 20px;
+}
