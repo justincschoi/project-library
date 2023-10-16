@@ -14,3 +14,8 @@ header {
     justify-content: space-between;
     padding: 1.5rem;
 }
+
+.add-button {
+    padding: .25rem 1rem;
+    font-size: 18px;
+}
