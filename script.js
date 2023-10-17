@@ -1,5 +1,8 @@
 const myLibrary = [];
 
+const addButton = document.querySelector('.add-button');
+const bookContainer = document.querySelector('.book-container');
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -10,3 +13,9 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(obj) {
     myLibrary.push(obj);
 }
+
+function showBookContainer() {
+    bookContainer.classList.remove('hidden');
+};
+
+addButton.addEventListener('click', showBookContainer);
