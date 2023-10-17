@@ -9,6 +9,10 @@
     grid-template-rows: 1fr 1fr;
 }
 
+.book-container.hidden {
+    display: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
