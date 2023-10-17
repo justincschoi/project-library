@@ -21,11 +21,17 @@ header {
 }
 
 .book-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* temp background */
+    background-color: lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 20vw;
+    width: 15vw;
     height: 15vw;
     padding: 20px;
 }
