@@ -61,3 +61,19 @@ input {
     height: 30px;
     width: 70px;
 }
+
+.library-container {
+    display: grid;
+    padding: 2rem;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 2rem;
+}
