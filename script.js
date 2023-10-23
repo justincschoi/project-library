@@ -28,8 +28,14 @@ function createCard() {
         const cardAuthor = document.createElement('p');
         const cardPages = document.createElement('p');
         const cardRead = document.createElement('p');
+        const removeButton = document.createElement('button');
 
-        newCard.className = "card";
+        newCard.className = 'card';
+        removeButton.className = 'remove-button';
+        removeButton.textContent = 'Remove';
+
+        removeButton.setAttribute('data-index', index);
+
         cardTitle.textContent = `Title: ${book.title}`;
         cardAuthor.textContent = `Author: ${book.author}`;
         cardPages.textContent = `Pages: ${book.pages}`;
@@ -40,6 +46,7 @@ function createCard() {
         newCard.appendChild(cardPages);
         newCard.appendChild(cardAuthor);
         newCard.appendChild(cardRead);
+        newCard.appendChild(removeButton);
     })
 };
 
@@ -81,4 +88,13 @@ submitButton.addEventListener('click', function () {
     readInput.checked = false;
 
     hideBookContainer();
+});
+
+libraryContainer.addEventListener('click', function (event) {
+    if (event.target.classList.contains('remove-button')) {
+        const bookIndex = event.target.getAttribute('data-index');
+        myLibrary.splice(bookIndex, 1); // Remove the book from the library array
+        clearLibrary();
+        createCard();
+    }
 });
